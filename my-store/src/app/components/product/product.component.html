@@ -1,0 +1,13 @@
+<div>
+    <div *ngFor="let dat of data,index as i">
+        <div (click)="routedetails(i)">
+            <img src="{{dat.url}}" alt="">
+        </div>
+        <p>{{dat.name}}</p>
+        <p>{{dat.price}}</p>
+        <select #select>
+            <option *ngFor="let va of [1,2,3,4,5,6,7,8,9,10]">{{va}}</option>
+        </select>
+        <button type="button" (click)="addproduct(+select.value,dat)">add to cart</button>
+    </div>
+</div>

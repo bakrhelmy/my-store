@@ -1,0 +1,23 @@
+<div class="con-cart">
+    <div  >
+        <div *ngFor="let item of data ; index as i" class="con-pro">
+            <div>
+                <img src="{{item.url}}" alt="">
+            </div>
+            <div >
+                <h3>{{item.name}}</h3>
+                <p>{{item.price | currency}}</p>
+                <span>Amount:</span>
+                <input #input type="number" min="1"  (ngModelChange)="change(input.value,i)"  [ngModel]="item.quan">
+                <br>
+            </div>
+        </div>
+        <!-- <p *ngIf="price() !== 0">{{price() | currency}}</p> -->
+    </div>
+    
+  
+</div>
+
+
+
+<app-form></app-form>

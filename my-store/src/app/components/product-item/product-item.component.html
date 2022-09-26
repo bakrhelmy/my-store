@@ -1,0 +1,13 @@
+<div >
+    <div >
+        <img src="{{datbase[i]?.url}}" alt="">
+    </div>
+    <p>{{datbase[i]?.name}}</p>
+    <p>{{datbase[i]?.price}}</p>
+
+    <select #select>
+        <option *ngFor="let va of [1,2,3,4,5,6,7,8,9,10]">{{va}}</option>
+    </select>
+    <button type="button" (click)="addproduct(+select.value,datbase[i].id)">add to cart</button>
+    <a routerLink="/">Back to products</a>
+</div>

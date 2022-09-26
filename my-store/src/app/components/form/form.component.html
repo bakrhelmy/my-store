@@ -1,0 +1,16 @@
+<form #form="ngForm" (ngSubmit)="onsubmit(username)">
+    <label for="">Full name</label>
+    <input type="text" #username="ngModel" name="username" ngModel placeholder="minimum 3 characters" minlength="3" required>
+    
+   
+    <label for="">Adress</label>
+    <input type="text"   placeholder="minimum 6 characters" minlength="6" required>
+
+    
+    <label for="">Credit card number</label>
+    <input type="number" required>
+
+
+    <p>We'll never share your payment details with anyone else</p>
+    <button type="submit">Submit</button>
+</form>
